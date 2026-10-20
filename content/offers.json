@@ -1,0 +1,32 @@
+{
+  "source": "https://raw.githubusercontent.com/Abilityai/keymaker-canon/main/domains/pricing/pricing.md",
+  "canon_updated": "2026-10-15",
+  "synced_at": "2026-10-20T16:29:02.180Z",
+  "offers": [
+    {
+      "name": "Automation audit",
+      "what": "We map what they run (agents, flows, scripts), decide keep / wrap / rebuild, and deliver a readiness report",
+      "price": "$2,500 fixed",
+      "notes": "2 weeks"
+    },
+    {
+      "name": "Pilot",
+      "what": "One department on their own Trinity instance: install, two agents, one real workflow live",
+      "price": "$12,000 fixed",
+      "notes": "4 weeks; credited against a Build"
+    },
+    {
+      "name": "Build",
+      "what": "The agency system: departments, shared brain, orchestrator, workspace for their team",
+      "price": "from $40,000",
+      "notes": "scoped per proposal"
+    },
+    {
+      "name": "Operate",
+      "what": "We run the instance with them: monitoring, improvements, new playbooks",
+      "price": "$2,500 / month",
+      "notes": "3-month minimum"
+    }
+  ],
+  "rules": "no discounts on the audit; a pilot credit applies only within 90 days; Operate is quoted only after a Build or a Pilot; a discount up to 10% on a Pilot or a Build is the rep's call and is given as an invoice credit, never as a lower rate; above 10% the principal decides."
+}

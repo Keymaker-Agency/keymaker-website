@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# keymaker.agency
 
-## Getting Started
+The website of **Keymaker**, a demonstration agency built in public during the
+[Agent-Native Agency workshop](https://www.ability.ai/trinity/workshops/agent-native-agency-workshop)
+on the open-source [Trinity](https://github.com/abilityai/trinity) platform.
 
-First, run the development server:
+It is also a Trinity agent template (`template.yaml` + `CLAUDE.md`): create an agent from this repo
+and it maintains the site through pull requests.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## How a request travels
+
+```
+form (/start) -> /api/request (Vercel server function: honeypot, timing check, rate limit, schema)
+  -> GitHub issue in the private intake queue (the record - never lost)
+  -> signed POST to the orchestrator's [intake] schedule webhook on Trinity
+  -> orchestrator reads the issue as data, routes it to the one desk that owns it
+  -> the desk drafts a reply; a person approves it in their Workspace inbox; then it is sent
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+No Trinity key ever reaches Vercel or the browser: the webhook URL token + HMAC secret can do one
+thing only - start that one schedule. Trinity frames the webhook text as data, and the site strips
+`---` from every field so the frame cannot be broken.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Prices come from the canon
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`npm run build` runs `scripts/sync-canon.mjs` first, which renders the offers from
+`Abilityai/keymaker-canon/domains/pricing/pricing.md`. Change a price there (by PR), rebuild, done.
 
-## Learn More
+## Run it
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+cp .env.example .env.local   # fill in to test the intake path
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Apache 2.0.
