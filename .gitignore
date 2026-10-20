@@ -1,3 +1,47 @@
+# >>> Trinity default ignore rules — managed; your own rules go BELOW and win (#2529) >>>
+.bash_logout
+.bashrc
+.profile
+.bash_history
+.sudo_as_admin_successful
+.cache/
+.local/
+.npm/
+.tmp/
+.trinity-clone-tmp/
+content/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.sqlite
+*.sqlite3
+*.db
+.claude.json
+.claude.json.backup
+.claude/projects/
+.claude/statsig/
+.claude/todos/
+.claude/debug/
+.claude/sessions/
+.claude/shell-snapshots/
+.claude/plugins/
+.claude/remote-settings.json
+.claude/policy-limits.json
+.claude/backups/
+.claude/.last-cleanup
+*.log
+*.tmp
+.DS_Store
+*.local.md
+*.local.json
+# <<< Trinity default ignore rules <<<
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -21,8 +65,6 @@
 /build
 
 # misc
-.DS_Store
-*.pem
 
 # debug
 npm-debug.log*
@@ -39,3 +81,23 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# >>> Trinity protected rules — managed; NOT overridable (credentials + platform-authored paths, #2529) >>>
+.env
+.env.*
+.mcp.json
+credentials.json
+*.pem
+*.key
+.ssh/
+.trinity/*
+!.trinity/pre-check
+!.trinity/post-check
+!.trinity/pre-snapshot
+!.trinity/setup.sh
+!.trinity/persistent-processes.allow
+!.trinity/brain-orb/
+!.trinity/pipelines/
+!.trinity/plugins.yaml
+!.env.example
+!.mcp.json.template
+# <<< Trinity protected rules <<<

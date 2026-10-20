@@ -1,0 +1,13 @@
+{
+  "extraKnownMarketplaces": {
+    "abilityai": {
+      "source": {
+        "source": "github",
+        "repo": "abilityai/abilities"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "trinity@abilityai": true
+  }
+}
