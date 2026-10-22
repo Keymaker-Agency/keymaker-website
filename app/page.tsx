@@ -56,6 +56,7 @@ export default function Home() {
             <Link href="/start" className="btn-primary">Start a project</Link>
             <Link href="#offers" className="btn-ghost">See the offers</Link>
           </div>
+          <p className="text-sm text-muted mt-8">Built in public during the Agent-Native Agency workshop.</p>
         </div>
       </section>
 
