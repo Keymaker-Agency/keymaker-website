@@ -53,7 +53,7 @@ export default function RequestForm() {
           {kinds.map(([v, l], i) => (
             <label key={v} className="cursor-pointer">
               <input type="radio" name="kind" value={v} defaultChecked={i === 0} className="peer sr-only" />
-              <span className="inline-block rounded-full border border-line px-4 py-2 peer-checked:border-brass peer-checked:text-brass">{l}</span>
+              <span className="inline-block rounded-full border border-line px-4 py-2 peer-checked:border-peach peer-checked:bg-parchment peer-checked:text-warm-black">{l}</span>
             </label>
           ))}
         </div>
@@ -67,7 +67,7 @@ export default function RequestForm() {
         Keymaker is a demonstration agency built in public. Your request is stored as a private record, read by AI agents and reviewed by a person. Please do not send anything confidential.
       </p>
       {err && <p className="text-sm text-[var(--warn)]">{err}</p>}
-      <button disabled={busy} className="justify-self-start rounded-full bg-brass text-ink font-medium px-6 py-3 hover:bg-brass-2 disabled:opacity-60">
+      <button disabled={busy} className="justify-self-start btn-primary disabled:opacity-60">
         {busy ? "Sending..." : "Send to Keymaker"}
       </button>
     </form>
