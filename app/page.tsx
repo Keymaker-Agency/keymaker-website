@@ -7,13 +7,13 @@ export default function Home() {
     <>
       <section className="grain">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-20 pb-24">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-brass">AI agent systems for agencies</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-brass">AI agent systems for recruiting firms</p>
           <h1 className="font-display text-4xl sm:text-6xl leading-[1.05] tracking-tight mt-5 max-w-4xl">
-            Your agency, run by agents your people direct.
+            Shortlists in 48 hours. Recruiters back on the phone.
           </h1>
           <p className="text-lg text-muted mt-6 max-w-2xl">
-            We set up the departments, the shared brain and the one orchestrator you talk to - on infrastructure you own -
-            and route every decision that matters to the person who owns it.
+            For specialist recruiting firms of 20-100 people: agents that source, write candidate summaries and build
+            client-ready shortlists, on infrastructure you own - and a recruiter approves everything that leaves.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link href="/start" className="rounded-full bg-brass text-ink font-medium px-6 py-3 hover:bg-brass-2">Start a project</Link>

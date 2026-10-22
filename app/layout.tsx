@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://keymaker.agency"),
   title: { default: "Keymaker - AI agent systems for agencies", template: "%s · Keymaker" },
   description:
-    "Keymaker sets up AI agent systems for agencies and service teams: departments, a shared brain, one orchestrator and a workspace for your people - on infrastructure you own.",
+    "Keymaker sets up AI agent systems for specialist recruiting firms: agents that source, summarise and shortlist, a shared brain of your placements, and a workspace for every recruiter - on infrastructure you own.",
 };
 
 function Key() {
