@@ -61,6 +61,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <p className="text-muted">Photography is illustrative.</p>
             </div>
           </div>
+          <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6 border-t border-line text-xs text-muted">
+            Made by <a className="underline decoration-line underline-offset-4 hover:text-text" href="https://www.ability.ai">Ability.ai</a>
+          </div>
         </footer>
       </body>
     </html>
