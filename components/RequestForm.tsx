@@ -59,7 +59,7 @@ export default function RequestForm() {
         </div>
       </fieldset>
       <label className="grid gap-2 text-sm">What would you like to automate, or what can we help with?
-        <textarea required name="message" rows={6} maxLength={2000} className="field" placeholder="We run a 30-person design studio. Proposals take us two days each..." />
+        <textarea required name="message" rows={6} maxLength={2000} className="field" placeholder="We are a 35-person finance recruitment firm. Shortlists take our recruiters four days and clients go quiet..." />
       </label>
       {/* honeypot: people never see it, bots fill it */}
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
