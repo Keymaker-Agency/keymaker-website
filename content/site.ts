@@ -16,6 +16,15 @@ export const offerCopy: Record<string, { lead: string; bullets: string[] }> = {
     lead: "We run the system with you: monitoring, improvements and new playbooks as your markets change.",
     bullets: ["Health and cost monitoring", "Monthly improvements", "New playbooks on request"],
   },
+  "Automation audit - workshop price": {
+    lead: "The same audit, for people who followed the Agent-Native Agency workshop. Pay by card; our finance desk records it, our sales desk opens your engagement, and a person is in touch within one business day.",
+    bullets: ["Three slots, until November 30", "Same audit, same readiness report", "Delivered by the people who built the agency"],
+  },
+};
+
+// Where an offer can be bought outright. The link, not the price, lives here - the price is the canon's.
+export const buyLinks: Record<string, { href: string; label: string }> = {
+  "Automation audit - workshop price": { href: "https://buy.stripe.com/28EdRb0g857f5jm8BYfEk00", label: "Pay $500 and book the audit" },
 };
 
 export const steps = [

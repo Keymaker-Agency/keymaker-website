@@ -1,7 +1,7 @@
 {
   "source": "https://raw.githubusercontent.com/Abilityai/keymaker-canon/main/domains/pricing/pricing.md",
-  "canon_updated": "2026-10-15",
-  "synced_at": "2026-10-22T00:50:41.673Z",
+  "canon_updated": "2026-10-29",
+  "synced_at": "2026-10-29T03:56:03.079Z",
   "offers": [
     {
       "name": "Automation audit",
@@ -26,6 +26,12 @@
       "what": "We run the instance with them: monitoring, improvements, new playbooks",
       "price": "$2,500 / month",
       "notes": "3-month minimum"
+    },
+    {
+      "name": "Automation audit - workshop price",
+      "what": "The same audit, for attendees of the Agent-Native Agency workshop; paid by card on the Stripe Payment Link",
+      "price": "$500 fixed",
+      "notes": "3 slots, until 2026-11-30; a payment is a won deal; decision 0008"
     }
   ],
   "rules": "no discounts on the audit; a pilot credit applies only within 90 days; Operate is quoted only after a Build or a Pilot; a discount up to 10% on a Pilot or a Build is the rep's call and is given as an invoice credit, never as a lower rate; above 10% the principal decides."
