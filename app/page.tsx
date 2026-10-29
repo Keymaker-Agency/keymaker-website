@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import offers from "@/content/offers.json";
-import { offerCopy, steps, agentWork, roles } from "@/content/site";
+import { offerCopy, buyLinks, steps, agentWork, roles } from "@/content/site";
 
 function ShortlistCard() {
   const rows = [
@@ -151,7 +151,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24 sm:py-32">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
-              <p className="eyebrow text-peach">Four ways to work with us</p>
+              <p className="eyebrow text-peach">Ways to work with us</p>
               <h2 className="display text-4xl sm:text-5xl mt-5">Start with one desk.</h2>
             </div>
             <p className="eyebrow text-muted">prices from our canon · {offers.canon_updated}</p>
@@ -174,6 +174,9 @@ export default function Home() {
                         <li key={b} className="flex gap-3"><span className={hi ? "text-warm-black/50" : "text-peach"}>-</span>{b}</li>
                       ))}
                     </ul>
+                  )}
+                  {buyLinks[o.name] && (
+                    <a href={buyLinks[o.name].href} className="btn-primary mt-8 self-start" rel="noopener">{buyLinks[o.name].label}</a>
                   )}
                   <p className={`eyebrow text-[11px] mt-auto pt-8 ${hi ? "text-warm-black/60" : "text-muted"}`}>{o.notes}</p>
                 </div>
