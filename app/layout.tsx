@@ -47,12 +47,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div>
               <p className="display text-2xl">Keymaker</p>
               <p className="text-muted text-sm mt-4 max-w-xl leading-relaxed">
-                A demonstration agency built in public during the{" "}
-                <a className="underline decoration-line underline-offset-4 hover:text-text" href="https://www.ability.ai/trinity/workshops/agent-native-agency-workshop">
-                  Agent-Native Agency workshop
-                </a>{" "}
-                on the open-source <a className="underline decoration-line underline-offset-4 hover:text-text" href="https://github.com/abilityai/trinity">Trinity</a> platform.
-                Requests sent here are read by AI agents and reviewed by people. Nothing leaves the agency without a person approving it.
+                AI agent systems for specialist recruiting firms, on infrastructure the firm owns. Nothing leaves without a
+                person approving it - theirs or ours.
               </p>
             </div>
             <div className="md:justify-self-end text-sm space-y-2">

@@ -10,8 +10,8 @@ export default function Start() {
         <p className="eyebrow text-peach">Start a project</p>
         <h1 className="display text-5xl sm:text-6xl mt-5">Tell us what slows your desk down.</h1>
         <p className="text-muted text-lg mt-6 leading-relaxed">
-          Your specialism, how many recruiters, how long a shortlist takes today. Our front desk reads every request within
-          minutes and hands it to the right person. A person on our team reviews the reply before it reaches you.
+          Your specialism, how many recruiters, how long a shortlist takes today. We read every request the day it
+          arrives, and a person on our team replies by email within one business day.
         </p>
         <div className="photo relative aspect-[16/10] mt-10 hidden lg:block">
           <Image src="/img/approve.jpg" alt="A team lead reviewing a draft before approving it" fill sizes="40vw" className="object-cover" />

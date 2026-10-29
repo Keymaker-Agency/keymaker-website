@@ -9,9 +9,9 @@ export default async function Received({ searchParams }: { searchParams: Promise
       <h1 className="display text-5xl sm:text-6xl mt-5">Thank you - it&apos;s with us.</h1>
       {ref && <p className="mt-6 font-mono text-lg">Your reference: <span className="text-peach">{ref}</span></p>}
       <ol className="mt-10 space-y-3 text-muted">
-        <li>1. Our front desk is reading it now and handing it to the right department.</li>
-        <li>2. The department drafts a reply.</li>
-        <li>3. A person on our team reviews it and sends it to you by email.</li>
+        <li>1. We are reading it now.</li>
+        <li>2. The right person on our team picks it up.</li>
+        <li>3. You hear from them by email within one business day.</li>
       </ol>
       <Link href="/" className="inline-block mt-12 btn-ghost">Back to Keymaker</Link>
     </div>

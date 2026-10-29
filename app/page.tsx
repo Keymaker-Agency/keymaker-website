@@ -12,7 +12,7 @@ function ShortlistCard() {
   return (
     <div className="rounded-lg bg-parchment text-warm-black p-6 sm:p-7 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)]">
       <div className="flex items-center justify-between gap-4">
-        <p className="eyebrow text-warm-black/70">Shortlist · drafted by the shortlist agent</p>
+        <p className="eyebrow text-warm-black/70">Shortlist · draft</p>
         <span className="eyebrow text-[10px] rounded-full border border-warm-black/25 px-2.5 py-1">Draft</span>
       </div>
       <p className="display text-2xl mt-4">Ashby Partners - Senior Financial Controller</p>
@@ -27,7 +27,7 @@ function ShortlistCard() {
         ))}
       </div>
       <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm">Waiting for <span className="font-medium">Priya, recruiter</span> to approve</p>
+        <p className="text-sm">Waiting for <span className="font-medium">the recruiter</span> to approve</p>
         <div className="flex gap-2 text-sm">
           <span className="rounded-full bg-warm-black text-parchment px-4 py-2">Send as written</span>
           <span className="rounded-full border border-warm-black/30 px-4 py-2">Don&apos;t send</span>
@@ -56,7 +56,6 @@ export default function Home() {
             <Link href="/start" className="btn-primary">Start a project</Link>
             <Link href="#offers" className="btn-ghost">See the offers</Link>
           </div>
-          <p className="text-sm text-muted mt-8">Built in public during the Agent-Native Agency workshop.</p>
         </div>
       </section>
 
@@ -146,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Offers - prices rendered from the canon at build */}
+      {/* Offers - prices rendered from the price list at build */}
       <section id="offers" className="border-t border-line scroll-mt-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24 sm:py-32">
           <div className="flex flex-wrap items-end justify-between gap-6">
@@ -154,7 +153,7 @@ export default function Home() {
               <p className="eyebrow text-peach">Ways to work with us</p>
               <h2 className="display text-4xl sm:text-5xl mt-5">Start with one desk.</h2>
             </div>
-            <p className="eyebrow text-muted">prices from our canon · {offers.canon_updated}</p>
+            <p className="eyebrow text-muted">price list · updated {offers.canon_updated}</p>
           </div>
           <div className="grid gap-4 md:grid-cols-2 mt-14">
             {offers.offers.map((o) => {
@@ -192,7 +191,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-forest via-forest/55 to-forest" />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 py-32 sm:py-44 text-center">
           <h2 className="display text-4xl sm:text-6xl max-w-3xl mx-auto">Tell us how long a shortlist takes you today.</h2>
-          <p className="text-muted mt-6 max-w-lg mx-auto">An agent reads your request within minutes. A person on our team replies.</p>
+          <p className="text-muted mt-6 max-w-lg mx-auto">We read every request the day it arrives. A person replies within one business day.</p>
           <div className="mt-10"><Link href="/start" className="btn-primary">Start a project</Link></div>
         </div>
       </section>
