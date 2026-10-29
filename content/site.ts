@@ -5,30 +5,30 @@ export const offerCopy: Record<string, { lead: string; bullets: string[] }> = {
     bullets: ["Every automation your recruiters rely on", "Keep / wrap / rebuild call for each", "A readiness report you can act on"],
   },
   Pilot: {
-    lead: "One desk live on your own Trinity instance: a sourcing agent and a shortlist agent. Brief in, client-ready shortlist out within 48 hours.",
+    lead: "One desk live on your own instance: a sourcing agent and a shortlist agent. Brief in, client-ready shortlist out within 48 hours.",
     bullets: ["Your instance, your keys", "Sourcing + shortlist agents, one live desk", "Credited against a Build"],
   },
   Build: {
-    lead: "The firm's system: a desk per specialism, a shared brain of placements and candidate notes, one orchestrator, a workspace for every recruiter.",
+    lead: "The firm's system: a desk per specialism, a shared memory of placements and candidate notes, one coordinating agent, a workspace for every recruiter.",
     bullets: ["A desk per specialism", "Placements and candidate notes that compound", "Approvals routed to the right person"],
   },
   Operate: {
     lead: "We run the system with you: monitoring, improvements and new playbooks as your markets change.",
     bullets: ["Health and cost monitoring", "Monthly improvements", "New playbooks on request"],
   },
-  "Automation audit - workshop price": {
-    lead: "The same audit, for people who followed the Agent-Native Agency workshop. Pay by card; our finance desk records it, our sales desk opens your engagement, and a person is in touch within one business day.",
-    bullets: ["Three slots, until November 30", "Same audit, same readiness report", "Delivered by the people who built the agency"],
+  "Automation audit - introductory price": {
+    lead: "The same audit at a limited-time price: three slots, until November 30. Pay by card and a person is in touch within one business day to schedule it.",
+    bullets: ["Three slots, until November 30", "Same audit, same readiness report", "Delivered by our senior team"],
   },
 };
 
 // Where an offer can be bought outright. The link, not the price, lives here - the price is the canon's.
 export const buyLinks: Record<string, { href: string; label: string }> = {
-  "Automation audit - workshop price": { href: "https://buy.stripe.com/28EdRb0g857f5jm8BYfEk00", label: "Pay $500 and book the audit" },
+  "Automation audit - introductory price": { href: "https://buy.stripe.com/28EdRb0g857f5jm8BYfEk00", label: "Pay $500 and book the audit" },
 };
 
 export const steps = [
-  { n: "01", t: "You tell us what hurts", d: "Use the form: your specialism, team size, how long a shortlist takes today. An agent reads it within minutes and a person replies." },
+  { n: "01", t: "You tell us what hurts", d: "Use the form: your specialism, team size, how long a shortlist takes today. We read it the day it arrives and a person replies within one business day." },
   { n: "02", t: "We map your desk", d: "Your ATS, sequences and the way your recruiters actually work - kept, wrapped or rebuilt, never thrown away by default." },
   { n: "03", t: "One desk goes live", d: "Sourcing and shortlist agents on your own instance, each with an owner and a gate. Agents draft; recruiters decide." },
   { n: "04", t: "Your firm works it", d: "One workspace. Every recruiter sees their agents; approvals land with the person who owns the client." },

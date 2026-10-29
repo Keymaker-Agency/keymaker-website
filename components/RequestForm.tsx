@@ -64,7 +64,7 @@ export default function RequestForm() {
       {/* honeypot: people never see it, bots fill it */}
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden />
       <p className="text-xs text-muted">
-        Keymaker is a demonstration agency built in public. Your request is stored as a private record, read by AI agents and reviewed by a person. Please do not send anything confidential.
+        Your request is stored as a private record, triaged by our systems and reviewed by a person. Please do not send anything confidential.
       </p>
       {err && <p className="text-sm text-[var(--warn)]">{err}</p>}
       <button disabled={busy} className="justify-self-start btn-primary disabled:opacity-60">

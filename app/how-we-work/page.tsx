@@ -3,19 +3,19 @@ import Link from "next/link";
 
 export const metadata = { title: "How we work" };
 
-const team = [
-  { seat: "Principal", person: "Eugene", agents: ["Orchestrator", "Brain"], decides: "Prices, anything above a rep's limit, what the agency believes" },
-  { seat: "Sales", person: "Sam Reyes", agents: ["Sales desk"], decides: "Replies to new clients, discounts up to 10%" },
-  { seat: "Delivery", person: "Noor Haddad", agents: ["Delivery desk", "Meeting notes"], decides: "Client state, project plans, what ships when" },
-  { seat: "Marketing", person: "Theo Lindqvist", agents: ["Marketing desk"], decides: "Anything published under our name" },
+const principles = [
+  { t: "We start with what you already run", d: "Your ATS, your sequences, the way your recruiters actually work. We map it first and keep what works; nothing is thrown away by default." },
+  { t: "One desk goes live before anything else", d: "A sourcing agent and a shortlist agent for one specialism, with one recruiter who owns the result. We prove the 48-hour shortlist on real briefs before we widen." },
+  { t: "A person approves everything that leaves", d: "Every summary, shortlist and client update is a draft until a recruiter presses send. The agents do the afternoon's work; your people make the calls." },
+  { t: "You own the system", d: "Your instance, your keys, your data. Candidate data is personal data and it stays with you. If we part ways, everything keeps running." },
 ];
 
 const flow = [
-  ["Your request", "lands in our intake queue as a record - it is never lost, even if every agent is busy."],
-  ["The orchestrator", "reads it as data, decides which kind of work it is, and hands it to the one desk that owns it."],
-  ["The desk", "opens your deal or project and drafts a reply. It never sends anything itself."],
-  ["A person", "on our team reviews the draft in their workspace inbox and presses send - or rewrites it."],
-  ["Above a limit", "anything off the price list goes to the principal, once, with the options and a deadline."],
+  ["Your request", "arrives through the form and is stored as a private record."],
+  ["We read it", "the same day, and the right person on our team picks it up."],
+  ["A reply", "comes from that person by email within one business day - usually a few questions and a proposed next step."],
+  ["An audit or a pilot", "is where most engagements start: two weeks to map your desk, or four weeks to put one desk live."],
+  ["Prices", "are on the price list and nowhere else. If something is not on it, we say so rather than guess."],
 ];
 
 export default function HowWeWork() {
@@ -26,25 +26,21 @@ export default function HowWeWork() {
         <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/70 to-forest/30" />
         <div className="relative mx-auto max-w-6xl w-full px-4 sm:px-6 pb-16 pt-40">
           <p className="eyebrow text-peach">How we work</p>
-          <h1 className="display text-5xl sm:text-7xl mt-5 max-w-3xl">People hold the seats. Agents serve them.</h1>
+          <h1 className="display text-5xl sm:text-7xl mt-5 max-w-3xl">Agents draft. Your people decide.</h1>
           <p className="text-muted text-lg mt-6 max-w-2xl leading-relaxed">
-            Keymaker runs on the same system we build for recruiting firms. Every seat has a person, every agent serves a
-            seat, and only a person approves anything that leaves the building.
+            We set up AI agents inside specialist recruiting firms: sourcing, candidate summaries, client-ready shortlists.
+            On infrastructure you own, with a recruiter approving everything that leaves.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 sm:px-6 py-24">
-        <p className="eyebrow text-peach">Our seats</p>
+        <p className="eyebrow text-peach">Four principles</p>
         <div className="mt-10 grid gap-px bg-line border border-line rounded-lg overflow-hidden sm:grid-cols-2">
-          {team.map((r) => (
-            <div key={r.seat} className="bg-forest p-7">
-              <div className="flex items-baseline justify-between gap-4">
-                <p className="display text-3xl">{r.seat}</p>
-                <p className="text-sm text-muted">{r.person}</p>
-              </div>
-              <p className="eyebrow text-[11px] text-peach mt-5">Served by {r.agents.join(" · ")}</p>
-              <p className="text-muted text-sm mt-3 leading-relaxed">Decides: {r.decides}</p>
+          {principles.map((r) => (
+            <div key={r.t} className="bg-forest p-7">
+              <p className="display text-2xl">{r.t}</p>
+              <p className="text-muted text-sm mt-4 leading-relaxed">{r.d}</p>
             </div>
           ))}
         </div>
@@ -54,7 +50,7 @@ export default function HowWeWork() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-24 grid gap-14 md:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="eyebrow text-peach">What happens to your request</p>
-            <h2 className="display text-4xl sm:text-5xl mt-5">Five steps, one person at the end.</h2>
+            <h2 className="display text-4xl sm:text-5xl mt-5">Five steps, a person at every one.</h2>
           </div>
           <ol className="border-t border-line">
             {flow.map(([t, d], i) => (
